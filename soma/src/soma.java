@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
@@ -38,5 +39,22 @@ public class soma {
                 "\nSeu peso: "+peso+
                 "\nSua altura: "+altura+
                 "\nSeu estado civil: "+estadoCivil);
+
+        //Apartir desse trecho do código estarei fazendo a implementação dos códigos condicionais
+        System.out.println("digite um número: \n");
+        int numero = input.nextInt();
+
+        System.out.println("Digite o segundo número: \n");
+        int numero2 = input.nextInt();
+
+        //código condicional para comparar se os números digitados.
+        if(numero > numero2){
+            System.out.println("O maior é: "+numero);
+        } else if (numero2 > numero){
+            System.out.println("O maior é: "+numero2);
+        }else{
+            System.out.println("Os número são iguais");
+        }
+        input.close();
     }
 }
