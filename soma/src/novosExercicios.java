@@ -36,7 +36,7 @@ public class novosExercicios {
 
         int opcao;
 
-        do{
+        do {
             //menu;
             System.out.println("\n=============MENU====================\n" +
                     "1 - Vetores e ordenação\n" +
@@ -48,19 +48,19 @@ public class novosExercicios {
                 case 1:
                     System.out.println("Digite o tamanho do vetor\n");
                     int n = input.nextInt();
-                    int [] vetor = new int [n];
+                    int[] vetor = new int[n];
 
                     System.out.println("Preencha o vetor:");
-                    for(int i = 0; i < vetor.length; i++){
-                        System.out.println("Digite o "+ (i+1)+"° número: ");
+                    for (int i = 0; i < vetor.length; i++) {
+                        System.out.println("Digite o " + (i + 1) + "° número: ");
                         vetor[i] = input.nextInt();
                     }
                     //Vetor Original
                     System.out.println(Arrays.toString(vetor));
                     //bubble sort
-                    for(int i = 0; i < vetor.length -1; i++){
-                        for(int j = 0; j < vetor.length -1 - i; j++){
-                            if(vetor[j] > vetor[j + 1]){
+                    for (int i = 0; i < vetor.length - 1; i++) {
+                        for (int j = 0; j < vetor.length - 1 - i; j++) {
+                            if (vetor[j] > vetor[j + 1]) {
                                 int aux = vetor[j];
                                 vetor[j] = vetor[j + 1];
                                 vetor[j + 1] = aux;
@@ -75,10 +75,10 @@ public class novosExercicios {
                     String nome = input.next();
 
                     int quantidadeVogais = 0;
-                    for(int i = 0; i < nome.length(); i++){
+                    for (int i = 0; i < nome.length(); i++) {
                         char letra = Character.toLowerCase(nome.charAt(i));
 
-                        if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+                        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
                             quantidadeVogais++;
                         }
                     }
@@ -87,42 +87,51 @@ public class novosExercicios {
                 case 2:
                     System.out.println("Digite o tamanho do vetor\n");
                     int vtnumeros = input.nextInt();
-                    int [] numeros = new int [vtnumeros];
+                    int[] numeros = new int[vtnumeros];
 
-                    for(int i = 0; i < numeros.length; i++){
+                    for (int i = 0; i < numeros.length; i++) {
                         System.out.println("Digite um número\n");
                         numeros[i] = input.nextInt();
                     }
                     //lista original
                     System.out.println(Arrays.toString(numeros));
 
-                    for(int i = 0; i < numeros.length; i++){
-                        if(numeros[i] % 2 == 0){
+                    for (int i = 0; i < numeros.length; i++) {
+                        if (numeros[i] % 2 == 0) {
                             numeros[i] *= 2;
-                        }else{
-                            numeros[i] = (int) Math.pow(numeros[i],2);
+                        } else {
+                            numeros[i] = (int) Math.pow(numeros[i], 2);
                         }
                     }
                     //nova lista.
                     System.out.println(Arrays.toString(numeros));
                     break;
                 case 3:
-                    System.out.println("Digite o seu nome\n");
+                    System.out.println("Digite o seu nome");
                     String nome_2 = input.next();
 
-                    char [] vetorNome = nome_2.toCharArray();
-                    char [] vetorNomeInvertido = new  char[vetorNome.length];
+                    char[] vetorNome = nome_2.toCharArray();
+                    char[] vetorNomeInvertido = new char[vetorNome.length];
+
                     int posicao = 0;
-                    for(int i = vetorNome.length - 1; i >= 0; i--){
+
+                    for (int i = vetorNome.length - 1; i >= 0; i--) {
                         vetorNomeInvertido[posicao] = vetorNome[i];
                         posicao++;
-                        System.out.println(vetorNomeInvertido[i]);
                     }
-                    //lista o vetor.
+
+                    //Mostra o Vetor original
+                    System.out.println("Vetor original:");
                     System.out.println(Arrays.toString(vetorNome));
+
+                    //Mostra o vetor invertido.
+                    System.out.println("Vetor invertido:");
                     System.out.println(Arrays.toString(vetorNomeInvertido));
+                    //Mostra a String do vetor invertida.
+                    System.out.println("Nome invertido:");
+                    System.out.println(new String(vetorNomeInvertido));
             }
-        }while (opcao != 0);
+        } while (opcao != 0);
     }
 
     private static void ordenacaoDescrecente() {
@@ -148,7 +157,7 @@ public class novosExercicios {
         System.out.println("Lista de números do vetor:\n");
         System.out.println(Arrays.toString(numeros));
 
-        //aqui iremos fazer o algoritmo que ordenação de forma crescente;
+        //aqui iremos fazer o algoritmo que ordenação de forma descrescente;
         for (int i = 0; i < numeros.length; i++) {
             for (int j = i + 1; j < numeros.length; j++) {
                 if (numeros[j] < numeros[j + 1]) {
@@ -171,7 +180,7 @@ public class novosExercicios {
                 }
             }
         }
-        System.out.println("Palavra ordenada:\n");
+        System.out.println("Palavra Descrecente:\n");
         System.out.println(Arrays.toString(palavras));
     }
 
