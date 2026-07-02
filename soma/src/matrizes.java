@@ -8,7 +8,8 @@ public class matrizes {
         System.out.println("Bem-vindo ao programa de aprendizado de matrizes.\n" +
                 "Por favor digite uma das opções abaixo:\n" +
                 "1 - Apredizado de Matrizes:\n" +
-                "2 - Operações com Matrizes:\n");
+                "2 - Operações com Matrizes:\n" +
+                "3 - Exercícios Ebac\n");
         int opcao = input.nextInt();
         switch (opcao) {
             case 1:
@@ -17,6 +18,29 @@ public class matrizes {
             case 2:
                 operacoesAritmeticasComMatrizes();
                 break;
+            case 3:
+                exerciciosDePratica();
+                break;
+        }
+    }
+
+    private static void exerciciosDePratica() {
+        int[][] matriz = new int[3][3];
+        matriz[0][0] = 55;
+        matriz[0][1] = 50;
+        matriz[0][2] = 98;
+        matriz[1][0] = 105;
+        matriz[1][1] = 264;
+        matriz[1][2] = -58;
+        matriz[2][0] = 7;
+        matriz[2][1] = 33;
+        matriz[2][2] = -4;
+
+        for (int linha = 0; linha < 3; linha++) {
+            for (int coluna = 0; coluna < 3; coluna++) {
+                System.out.print(matriz[linha][coluna] + " ");
+            }
+            System.out.println();
         }
     }
 
