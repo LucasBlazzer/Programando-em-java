@@ -1,3 +1,4 @@
+import com.objetos.entity.Alunos;
 import com.objetos.entity.Carros;
 import com.objetos.entity.Motos;
 
@@ -9,7 +10,8 @@ public class cadastro {
 
         System.out.println("Digite a opção que você quer cadastrar: \n" +
                 "1 - Carros\n" +
-                "2 - Motos\n");
+                "2 - Motos\n" +
+                "3 - Cadastro de Alunos e suas notas.\n");
         int opcao = input.nextInt();
         switch (opcao) {
             case 1:
@@ -18,7 +20,66 @@ public class cadastro {
             case 2:
                 cadastroMotos();
                 break;
+            case 3:
+                cadastroDeAlunos();
+                break;
         }
+    }
+
+    private static void cadastroDeAlunos() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de alunos: ");
+        int quantidadeAlunos = input.nextInt();
+
+        System.out.print("Digite a quantidade de provas/notas por aluno: ");
+        int quantidadeNotas = input.nextInt();
+
+        input.nextLine();
+
+        Alunos[] alunos = new Alunos[quantidadeAlunos];
+
+        for (int i = 0; i < alunos.length; i++) {
+
+            System.out.println("\n===== Cadastro do aluno " + (i + 1) + " =====");
+
+            System.out.print("Digite o nome do aluno: ");
+            String nome = input.nextLine();
+
+            System.out.print("Digite a idade do aluno: ");
+            int idade = input.nextInt();
+
+            input.nextLine();
+
+            alunos[i] = new Alunos(nome, idade, quantidadeNotas);
+
+            for (int j = 0; j < quantidadeNotas; j++) {
+
+                boolean notaValida = false;
+
+                while (!notaValida) {
+                    System.out.print("Digite a nota " + (j + 1) + " do aluno " + nome + ": ");
+                    double nota = input.nextDouble();
+
+                    notaValida = alunos[i].adicionarNota(j, nota);
+
+                    if (!notaValida) {
+                        System.out.println("Nota inválida! Digite uma nota entre 0 e 10.");
+                    }
+                }
+            }
+
+            input.nextLine();
+        }
+
+        System.out.println("\n========== DADOS DOS ALUNOS ==========");
+
+        for (int i = 0; i < alunos.length; i++) {
+            System.out.println("\nAluno " + (i + 1) + ":");
+            alunos[i].exibirDados();
+        }
+
+        input.close();
     }
 
     public static void cadastroMotos() {
