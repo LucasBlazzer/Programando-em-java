@@ -1,4 +1,4 @@
-package com.objetos.entity;
+package com.objetos.entity.cadastros;
 
 public class Motos {
     private String marca;
