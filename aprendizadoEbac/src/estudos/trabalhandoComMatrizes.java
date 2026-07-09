@@ -1,11 +1,12 @@
-import java.util.Arrays;
+package estudos;
+
 import java.util.Scanner;
 
-public class matrizes {
-    public static void main(String[] args) {
+public class trabalhandoComMatrizes {
+    public static void executar(){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Bem-vindo ao programa de aprendizado de matrizes.\n" +
+        System.out.println("Bem-vindo ao programa de aprendizado de estudos.matrizes.\n" +
                 "Por favor digite uma das opções abaixo:\n" +
                 "1 - Apredizado de Matrizes:\n" +
                 "2 - Operações com Matrizes:\n" +

@@ -1,6 +1,4 @@
-package com.objetos.entity;
-
-import java.util.Arrays;
+package com.objetos.entity.cadastros;
 
 public class Alunos {
 

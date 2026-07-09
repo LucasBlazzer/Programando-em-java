@@ -1,4 +1,4 @@
-package com.objetos.entity;
+package com.objetos.entity.cadastros;
 
 public class Carros {
     private String modelo;

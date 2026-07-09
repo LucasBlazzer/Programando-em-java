@@ -1,11 +1,13 @@
-import com.objetos.entity.Alunos;
-import com.objetos.entity.Carros;
-import com.objetos.entity.Motos;
+package estudos;
+
+import com.objetos.entity.cadastros.Alunos;
+import com.objetos.entity.cadastros.Carros;
+import com.objetos.entity.cadastros.Motos;
 
 import java.util.Scanner;
 
 public class cadastro {
-    public static void main(String[] args) {
+    public static void executar() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite a opção que você quer cadastrar: \n" +
@@ -28,6 +30,7 @@ public class cadastro {
 
     private static void cadastroDeAlunos() {
         Scanner input = new Scanner(System.in);
+
 
         System.out.print("Digite a quantidade de alunos: ");
         int quantidadeAlunos = input.nextInt();
@@ -125,8 +128,8 @@ public class cadastro {
 
         // Laço de repetição verifica se o valor digitado esta de acordo com o que o sistema está solicitando.
         do {
-            //recebe a quantidade de Carros para o cadastro no sistema.
-            System.out.println("Quantos Carros deseja cadastrar? Máximo 50 Carros por cadastro: ");
+            //recebe a quantidade de Carros para o estudos.cadastro no sistema.
+            System.out.println("Quantos Carros deseja cadastrar? Máximo 50 Carros por estudos.cadastro: ");
             quantidade = input.nextInt();
 
             //verifica o valor digita pelo usuário.
@@ -138,7 +141,7 @@ public class cadastro {
         //Criando um vetor de Carros.
         Carros[] carros = new Carros[quantidade];
 
-        //Laço de repetição onde irá receber os dados de cadastro dos modelos dos Carros dependo da quantidade digita pelo usuário.
+        //Laço de repetição onde irá receber os dados de estudos.cadastro dos modelos dos Carros dependo da quantidade digita pelo usuário.
         for (int i = 0; i < carros.length; i++) {
             System.out.println("\nCADASTROS DE CARROS: " + (i + 1));
 
@@ -157,7 +160,7 @@ public class cadastro {
             //Recebe as informações digitadas pelos usuário e grava em uma ArrayList.
             carros[i] = new Carros(modelo, marca, ano, preco);
         }
-        //Aqui o algoritmo fará o calculo da soma de todos os precos dos veiculos gravados no Array.
+        //Aqui o algoritmo fará o calculo da estudos.soma de todos os precos dos veiculos gravados no Array.
         double somaPrecos = 0;
         System.out.println("\nCARROS CADASTRADOS");
 

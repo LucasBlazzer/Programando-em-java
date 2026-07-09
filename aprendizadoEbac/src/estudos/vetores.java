@@ -1,34 +1,38 @@
+package estudos;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class novosExercicios {
-    public static void main(String[] args) {
+public class vetores {
+
+    public static void executar(){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Bem-vindo aos estudos do módulo de vetores\n");
-        System.out.println("Digite uma das seguintes opcoes abaixo:\n" +
-                "1 - trabalhando com vetores\n" +
-                "2 - Ordenação Crescente\n" +
-                "3 - Ordenação Decrescente\n" +
-                "4 - Prática de Vetores\n");
-        int opcao = input.nextInt();
+        int opcao;
+        do{
+            System.out.println("Bem-vindo aos estudos do módulo de vetores\n");
+            System.out.println("Digite uma das seguintes opcoes abaixo:\n" +
+                    "1 - trabalhando com vetores\n" +
+                    "2 - Ordenação Crescente\n" +
+                    "3 - Ordenação Decrescente\n" +
+                    "4 - Prática de Vetores\n");
+            opcao = input.nextInt();
 
-        switch (opcao) {
-            case 1:
-                trabalhandoComVetores();
-                break;
-            case 2:
-                ordenacaoCrescente();
-                break;
-            case 3:
-                ordenacaoDescrecente();
-                break;
-            case 4:
-                praticasDeVetores();
-                break;
-        }
+            switch (opcao) {
+                case 1:
+                    trabalhandoComVetores();
+                    break;
+                case 2:
+                    ordenacaoCrescente();
+                    break;
+                case 3:
+                    ordenacaoDescrecente();
+                    break;
+                case 4:
+                    praticasDeVetores();
+                    break;
+            }
+        }while(opcao != 0);
     }
 
     private static void praticasDeVetores() {

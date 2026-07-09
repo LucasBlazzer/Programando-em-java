@@ -1,56 +1,185 @@
-import javax.swing.*;
+package estudos;
+
 import java.util.Scanner;
 
+public class exercicioDeLacosInterativosSequenciais {
 
-public class soma {
-    public static void main(String[] args) {
+    public static void executar(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Seja Bem-vindo a minha primeira aplicação Java\n");
 
-        System.out.println("Digite a opção desejada:\n" +
-                "1 - Cadastro de usuário\n" +
-                "2 - Comparação entre dois números\n" +
-                "3 - Soma de Variáveis\n" +
-                "4 - Subtração de Variáveis\n" +
-                "5 - Calculo de IMC\n" +
-                "6 - Números Crescentes e Descrescentes\n" +
-                "7 - Saque de banco\n" +
-                "8 - Verificando Senha\n" +
-                "9 - Calculo de potência\n" +
-                "10 - Tabuada e Menu Interativo");
-        int opcao = input.nextInt();
-        switch (opcao){
-            case 1:
-                Cadastro();
-                break;
-            case 2:
-                comparando();
-                break;
-            case 3:
-                somaDeVariaveis();
-                break;
-            case 4:
-                subtracaoDeVariaveis();
-                break;
-            case 5:
-                calculoImc();
-                break;
-            case 6:
-                crescentesDescrescentes();
-                break;
-            case 7:
-                saque();
-                break;
-            case 8:
-                verificandoSenhas();
-                break;
-            case 9:
-                potencia();
-                break;
-            case 10:
-                tabuada();
-                break;
+        int opcao;
+
+        do{
+            System.out.println("\nBem-vindo ao módulo de exercício de algoritmos sequenciais, interativos e lacos de repetição!\n" +
+                    "Digite a opção que deseja executar:\n" +
+                    "1 - Cadastros de usuários\n" +
+                    "2 - Comparação entre dois números\n" +
+                    "3 - Soma de Variáveis\n" +
+                    "4 - Subtração de Variáveis\n" +
+                    "5 - CAlculos de IMC\n" +
+                    "6 - Números Crescentes e Descrescentes\n" +
+                    "7 - Saque de Banco\n" +
+                    "8 - Verificando Senha\n" +
+                    "9 - Calculo de Potência\n" +
+                    "10 - Tabuada e Menu Interativo" +
+                    "0 - Sair");
+
+            opcao = input.nextInt();
+            switch (opcao){
+                case 1:
+                    Cadastro();
+                    break;
+                case 2:
+                    comparando();
+                    break;
+                case 3:
+                    somaDeVariaveis();
+                    break;
+                case 4:
+                    subtracaoDeVariaveis();
+                    break;
+                case 5:
+                    calculoImc();
+                    break;
+                case 6:
+                    crescentesDescrescentes();
+                    break;
+                case 7:
+                    saque();
+                    break;
+                case 8:
+                    verificandoSenhas();
+                    break;
+                case 9:
+                    potencia();
+                    break;
+                case 10:
+                    tabuada();
+                    break;
+            }
+        }while(opcao != 0);
+    }
+
+    public static void Cadastro() {
+        Scanner input = new Scanner(System.in);
+
+        //Usuário digitará o nome dele.
+        System.out.println("Digite seu nome completo:\n");
+        String nomeCompleto = input.nextLine();
+
+
+        //Usuário digitará o CPF.
+        System.out.println("Digite seu CPF (somente os números):\n");
+        String cpf = input.nextLine();
+
+        //Usuário digitará a idade dele.
+        System.out.println("Digite a sua idade (somente números):\n");
+        int idade = input.nextInt();
+
+        //Usuário digitará o seu peso - variável Double ou float.
+        System.out.println("Digite o seu peso\n");
+        double peso = input.nextDouble();
+
+        //Usuário digitará sua altura - variável double ou float
+        System.out.println("Digite a sua altura\n");
+        double altura = input.nextDouble();
+
+        //Usuário digitará seu estado civil - String
+        System.out.println("Digite seu estado civil: \n");
+        String estadoCivil = input.nextLine();
+
+        //Impressão das informações na tela.
+        System.out.println("Seu nome é: " + nomeCompleto +
+                "\nSeu CPF: " + cpf +
+                "\nSua idade é de: " + idade +
+                "\nSeu peso: " + peso +
+                "\nSua altura: " + altura +
+                "\nSeu estado civil: " + estadoCivil);
+
+        input.close();//fechamento do metodo scanner.
+    }
+
+    public static void comparando() {
+        Scanner input = new Scanner(System.in);
+
+        //Apartir desse trecho do código estarei fazendo a implementação dos códigos condicionais
+        System.out.println("digite um número: \n");
+        int numero = input.nextInt();
+
+        System.out.println("Digite o segundo número: \n");
+        int numero2 = input.nextInt();
+
+        //código condicional para comparar se os números digitados.
+        if (numero > numero2) {
+            System.out.println("O maior é: " + numero);
+        } else if (numero2 > numero) {
+            System.out.println("O maior é: " + numero2);
+        } else {
+            System.out.println("Os número são iguais");
         }
+        input.close();
+    }
+
+    public static void somaDeVariaveis() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("digite um numero: \n");
+        int numero = input.nextInt();
+
+        System.out.println("Digite o segundo número: \n");
+        int numero2 = input.nextInt();
+
+        int soma  =  numero + numero2;
+        System.out.println("A estudos.soma de: " + numero + " + " + numero2 + " = " + soma);
+
+        input.close();
+    }
+
+    private static void subtracaoDeVariaveis() {
+        //Esse algoritmo deve calcular uma subtração entre duas variáveis.
+        Scanner input = new Scanner (System.in);
+        System.out.println("Bem-vindo ao algortimo de subtração!\n");
+
+        System.out.println("Digite a primeira variável.\n");
+        int num_1 = input.nextInt();
+
+        System.out.println("Digite a segunda variável.\n");
+        int num_2 = input.nextInt();
+
+        int resultado = num_1 - num_2;
+        System.out.println("O resultado da subtração de: "+num_1+" - "+num_2+" = "+resultado);
+
+        input.close();
+    }
+
+    private static void calculoImc() {
+        //Aqui vamos fazer um algoritmo para fazer um calculo de IMC.
+        Scanner input = new Scanner (System.in);
+        System.out.println("Bem-vindo ao algortimo de calculo de IMC!\n");
+
+        //Solicitação de dados para o usuário.
+        System.out.println("Digite a sua altura.\n");
+        double altura = input.nextDouble();
+
+        System.out.println("Digite seu peso.\n");
+        double peso = input.nextDouble();
+
+        double imc = peso/(altura*altura);
+
+        if (imc < 18.5){
+            System.out.println("Abaixo do peso, procure um nutricionista!\n");
+        }else if (imc >18.5 && imc < 24.9){
+            System.out.println("Peso Normal! Mantenha assim!\n");
+        }else if (imc >24.9 && imc < 29.9){
+            System.out.println("Você esta com Sobrepeso, procure um nutricionista!\n");
+        }else if (imc >29.9 && imc < 32.9){
+            System.out.println("Obesidade Grau I, procure um nutricionista!\n");
+        } else if (imc >32.9 && imc < 39.9) {
+            System.out.println("Obesidade Grau II (Severa), procure um nutricionista!\n");
+        }else if (imc >39.9 && imc < 41.9){
+            System.out.println("Obesidade Grau III (Mórbida), procure um nutricionista ou médico especialista!\n");
+        }
+
         input.close();
     }
 
@@ -258,129 +387,6 @@ public class soma {
         }else{
             System.out.println(nome);
         }
-
-        input.close();
-    }
-
-    private static void calculoImc() {
-        //Aqui vamos fazer um algoritmo para fazer um calculo de IMC.
-        Scanner input = new Scanner (System.in);
-        System.out.println("Bem-vindo ao algortimo de calculo de IMC!\n");
-
-        //Solicitação de dados para o usuário.
-        System.out.println("Digite a sua altura.\n");
-        double altura = input.nextDouble();
-
-        System.out.println("Digite seu peso.\n");
-        double peso = input.nextDouble();
-
-        double imc = peso/(altura*altura);
-
-        if (imc < 18.5){
-            System.out.println("Abaixo do peso, procure um nutricionista!\n");
-        }else if (imc >18.5 && imc < 24.9){
-            System.out.println("Peso Normal! Mantenha assim!\n");
-        }else if (imc >24.9 && imc < 29.9){
-            System.out.println("Você esta com Sobrepeso, procure um nutricionista!\n");
-        }else if (imc >29.9 && imc < 32.9){
-            System.out.println("Obesidade Grau I, procure um nutricionista!\n");
-        } else if (imc >32.9 && imc < 39.9) {
-            System.out.println("Obesidade Grau II (Severa), procure um nutricionista!\n");
-        }else if (imc >39.9 && imc < 41.9){
-            System.out.println("Obesidade Grau III (Mórbida), procure um nutricionista ou médico especialista!\n");
-        }
-
-        input.close();
-    }
-
-    private static void subtracaoDeVariaveis() {
-        //Esse algoritmo deve calcular uma subtração entre duas variáveis.
-        Scanner input = new Scanner (System.in);
-        System.out.println("Bem-vindo ao algortimo de subtração!\n");
-
-        System.out.println("Digite a primeira variável.\n");
-        int num_1 = input.nextInt();
-
-        System.out.println("Digite a segunda variável.\n");
-        int num_2 = input.nextInt();
-
-        int resultado = num_1 - num_2;
-        System.out.println("O resultado da subtração de: "+num_1+" - "+num_2+" = "+resultado);
-
-        input.close();
-    }
-
-    public static void Cadastro() {
-        Scanner input = new Scanner(System.in);
-
-        //Usuário digitará o nome dele.
-        System.out.println("Digite seu nome completo:\n");
-        String nomeCompleto = input.nextLine();
-
-
-        //Usuário digitará o CPF.
-        System.out.println("Digite seu CPF (somente os números):\n");
-        String cpf = input.nextLine();
-
-        //Usuário digitará a idade dele.
-        System.out.println("Digite a sua idade (somente números):\n");
-        int idade = input.nextInt();
-
-        //Usuário digitará o seu peso - variável Double ou float.
-        System.out.println("Digite o seu peso\n");
-        double peso = input.nextDouble();
-
-        //Usuário digitará sua altura - variável double ou float
-        System.out.println("Digite a sua altura\n");
-        double altura = input.nextDouble();
-
-        //Usuário digitará seu estado civil - String
-        System.out.println("Digite seu estado civil: \n");
-        String estadoCivil = input.nextLine();
-
-        //Impressão das informações na tela.
-        System.out.println("Seu nome é: " + nomeCompleto +
-                "\nSeu CPF: " + cpf +
-                "\nSua idade é de: " + idade +
-                "\nSeu peso: " + peso +
-                "\nSua altura: " + altura +
-                "\nSeu estado civil: " + estadoCivil);
-
-        input.close();//fechamento do metodo scanner.
-    }
-
-    public static void comparando() {
-        Scanner input = new Scanner(System.in);
-
-        //Apartir desse trecho do código estarei fazendo a implementação dos códigos condicionais
-        System.out.println("digite um número: \n");
-        int numero = input.nextInt();
-
-        System.out.println("Digite o segundo número: \n");
-        int numero2 = input.nextInt();
-
-        //código condicional para comparar se os números digitados.
-        if (numero > numero2) {
-            System.out.println("O maior é: " + numero);
-        } else if (numero2 > numero) {
-            System.out.println("O maior é: " + numero2);
-        } else {
-            System.out.println("Os número são iguais");
-        }
-        input.close();
-    }
-
-    public static void somaDeVariaveis() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("digite um numero: \n");
-        int numero = input.nextInt();
-
-        System.out.println("Digite o segundo número: \n");
-        int numero2 = input.nextInt();
-
-        int soma  =  numero + numero2;
-        System.out.println("A soma de: " + numero + " + " + numero2 + " = " + soma);
 
         input.close();
     }
