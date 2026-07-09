@@ -19,6 +19,7 @@ public class Main {
                     "3 - Exercícios de Matrizes\n" +
                     "4 - Exercício de Orientação a Objetos\n" +
                     "5 - Exercício de Criação: Sistema de Controle de Reservas de Hotel\n" +
+                    "6 - Exercício: Fibonacci\n" +
                     "0 - Sair");
 
             opcao = Integer.parseInt(input.nextLine());
@@ -42,6 +43,9 @@ public class Main {
 
                 case 5:
                     sistemaDeControleDeReservasDeHotel.executar();
+                    break;
+                case 6:
+                    recursividadeProgramacaoDinamica.exercutar();
                     break;
 
                 case 0:
