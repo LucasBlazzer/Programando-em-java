@@ -19,7 +19,8 @@ public class Main {
                     "3 - Exercícios de Matrizes\n" +
                     "4 - Exercício de Orientação a Objetos\n" +
                     "5 - Exercício de Criação: Sistema de Controle de Reservas de Hotel\n" +
-                    "6 - Exercício: Fibonacci\n" +
+                    "6 - Exercício: Recursividade\n" +
+                    "7 - Técnicas Avançadas de Programação\n" +
                     "0 - Sair");
 
             opcao = Integer.parseInt(input.nextLine());
@@ -46,6 +47,9 @@ public class Main {
                     break;
                 case 6:
                     recursividadeProgramacaoDinamica.exercutar();
+                    break;
+                case 7:
+                    tecnicasConceitosAvancados.executar();
                     break;
 
                 case 0:
