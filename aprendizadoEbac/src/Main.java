@@ -1,4 +1,5 @@
 import estudos.*;
+import estudos.recursosAvancados.colecaoComparacaoObjetosControleDuplicidade;
 
 import java.util.Scanner;
 
@@ -21,9 +22,10 @@ public class Main {
                     "5 - Exercício de Criação: Sistema de Controle de Reservas de Hotel\n" +
                     "6 - Exercício: Recursividade\n" +
                     "7 - Técnicas Avançadas de Programação\n" +
+                    "8 - Exercício - Coleção, Comparação de Obejtos e Controle de duplicidade\n" +
                     "0 - Sair");
 
-            opcao = Integer.parseInt(input.nextLine());
+            opcao = input.nextInt();
 
             switch (opcao) {
                 case 1:
@@ -50,6 +52,9 @@ public class Main {
                     break;
                 case 7:
                     tecnicasConceitosAvancados.executar();
+                    break;
+                case 8:
+                    colecaoComparacaoObjetosControleDuplicidade.executar();
                     break;
 
                 case 0:
