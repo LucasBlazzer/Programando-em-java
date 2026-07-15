@@ -1,5 +1,7 @@
 import estudos.*;
 import estudos.recursosAvancados.colecaoComparacaoObjetosControleDuplicidade;
+import estudos.recursosAvancados.dataTime.dataTimeNaPratica;
+import estudos.sequenciais.chamaClassesSequencial;
 
 import java.util.Scanner;
 
@@ -15,7 +17,7 @@ public class Main {
         do {
             System.out.println("\nBem-vindo ao menu de Exercícios e Aprendizado!\n" +
                     "Digite a opção desejada:\n" +
-                    "1 - Exercício de Uso de Laços de Repetição e Interativos\n" +
+                    "1 - Exercícios Sequenciais\n" +
                     "2 - Exercícios de Vetores\n" +
                     "3 - Exercícios de Matrizes\n" +
                     "4 - Exercício de Orientação a Objetos\n" +
@@ -23,13 +25,14 @@ public class Main {
                     "6 - Exercício: Recursividade\n" +
                     "7 - Técnicas Avançadas de Programação\n" +
                     "8 - Exercício - Coleção, Comparação de Obejtos e Controle de duplicidade\n" +
+                    "9 - Exercício - Data time\n" +
                     "0 - Sair");
 
             opcao = input.nextInt();
 
             switch (opcao) {
                 case 1:
-                    exercicioDeLacosInterativosSequenciais.executar();
+                    chamaClassesSequencial.executarProgramaSequencial();
                     break;
 
                 case 2:
@@ -55,6 +58,9 @@ public class Main {
                     break;
                 case 8:
                     colecaoComparacaoObjetosControleDuplicidade.executar();
+                    break;
+                case 9:
+                    dataTimeNaPratica.exercutarDataTimeNaPratica();
                     break;
 
                 case 0:
