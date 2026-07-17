@@ -1,9 +1,6 @@
 package estudos.sequenciais;
 
-import estudos.sequenciais.classes.multiplicacao;
-import estudos.sequenciais.classes.olaMundo;
-import estudos.sequenciais.classes.soma;
-import estudos.sequenciais.classes.subtracao;
+import estudos.sequenciais.classes.*;
 
 import java.util.Scanner;
 
@@ -22,6 +19,9 @@ public class chamaClassesSequencial {
                     "2 - Soma de variáveis\n" +
                     "3 - Subtração de variáveis\n" +
                     "4 - Multiplicação de variáveis\n" +
+                    "5 - Cadastro Simples de Pessoa\n" +
+                    "6 - Calculadora Básica Sequencial\n" +
+                    "7 - Calculo de média Sequencial\n" +
                     "0 - sair");
             opcao = Integer.parseInt(leitor.nextLine());
             switch (opcao){
@@ -36,6 +36,15 @@ public class chamaClassesSequencial {
                     break;
                 case 4:
                     multiplicacao.executarMultiplicacao();
+                    break;
+                case 5:
+                    cadastroSequencial.executarCadastroSequencial();
+                    break;
+                case 6:
+                    calculadoraBasicaSequencial.executarCalculadoraBasicaSequencial();
+                    break;
+                case 7:
+                    calculoDeMedia.exercutarCalculoDeMedia();
                     break;
                 case 0:
                     System.out.println("Sistema finalizado.");
