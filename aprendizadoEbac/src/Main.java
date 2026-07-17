@@ -1,3 +1,4 @@
+import AlgoritmosInterativos.startInterativos;
 import AlgoritmosSequenciais.StartSequencial;
 
 import java.util.Scanner;
@@ -49,6 +50,8 @@ public class Main {
                 case 1:
                     StartSequencial.executarSequencial();
                     break;
+                case 2:
+                    startInterativos.executarInterativos();
             }
         }while(opcao != 0);
         leitor.close();
