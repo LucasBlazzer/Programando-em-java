@@ -1,79 +1,56 @@
-import estudos.*;
-import estudos.recursosAvancados.colecaoComparacaoObjetosControleDuplicidade;
-import estudos.recursosAvancados.dataTime.dataTimeNaPratica;
-import estudos.sequenciais.chamaClassesSequencial;
+import AlgoritmosSequenciais.StartSequencial;
 
 import java.util.Scanner;
 
-//Esse arquivo é a classe principal do meu projeto. Aqui estou fazendo todos meus exercícios e projetos de estudos de Java.
-//Aqui estará todos os projetos, exercício entre outras coisas que estou fazendo para aprender a programar.
+/**
+ * Criado Por Lucas da Silva Carvalho
+ * Sistema de Aprendizagem de algoritmos em Java.
+ * Essa primeira classe é o ponto de partida para o desenvolvimento de aplicações java mais organizada e coesas.
+ */
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        /**
+         * Importação da classe Scanner. Essa classe é importante para podermos receber dados digitados pelo usuário.
+         */
+        Scanner leitor = new Scanner(System.in);
+        /**
+         * aqui temos a declaração de variáveis em Java.
+         * Nessa linha estaremos recebendo um número inteiro do usuário para que o algoritmo pode ser executado.
+         */
         int opcao;
 
-        do {
-            System.out.println("\nBem-vindo ao menu de Exercícios e Aprendizado!\n" +
-                    "Digite a opção desejada:\n" +
-                    "1 - Exercícios Sequenciais\n" +
-                    "2 - Exercícios de Vetores\n" +
-                    "3 - Exercícios de Matrizes\n" +
-                    "4 - Exercício de Orientação a Objetos\n" +
-                    "5 - Exercício de Criação: Sistema de Controle de Reservas de Hotel\n" +
-                    "6 - Exercício: Recursividade\n" +
-                    "7 - Técnicas Avançadas de Programação\n" +
-                    "8 - Exercício - Coleção, Comparação de Obejtos e Controle de duplicidade\n" +
-                    "9 - Exercício - Data time\n" +
-                    "0 - Sair");
+        do{
+            /**
+             * Aqui começaremos uma pequena lógica para que o menu de innteração fique rodando até que o usuário digite a opção de saída.
+             * do-while: laço de repetição que garante que o código fique rodando até atingir a codição necessária de saída.
+             * System.out.println: imprime uma mensagem para o usuário para que ele tenha uma interação com o algoritmo.
+             * switch-case: menu de interação.
+             */
+            System.out.println("Digite a opção abaixo desejada:\n" +
+                    "1 - Algoritmo Sequenciais\n" +
+                    "2 - Algoritmos Interativos\n" +
+                    "3 - Algoritmos de Laços de Repetição\n" +
+                    "4 - Algoritmo de Vetores\n" +
+                    "5 - Algoritmo de Matrizes\n" +
+                    "6 - Algoritmo de Orientação a Objetos\n" +
+                    "7 - Técnicas e Conseitos Avançados\n" +
+                    "8 - Recursos Avançados\n" +
+                    "9 - Banco de Dados e Marven\n" +
+                    "10 - Spring Boot\n" +
+                    "11 - Realizando Testes de Software e NoSQL\n" +
+                    "12 - Arquitetura Moderna, Microsserviços e Cloud\n" +
+                    "13 - Final da Jornada\n" +
+                    "0 - Fechar Programa\n");
+            opcao = leitor.nextInt();
 
-            opcao = input.nextInt();
-
-            switch (opcao) {
+            switch(opcao){
                 case 1:
-                    chamaClassesSequencial.executarProgramaSequencial();
-                    break;
-
-                case 2:
-                    vetores.executar();
-                    break;
-
-                case 3:
-                    trabalhandoComMatrizes.executar();
-                    break;
-
-                case 4:
-                    cadastro.executar();
-                    break;
-
-                case 5:
-                    sistemaDeControleDeReservasDeHotel.executar();
-                    break;
-                case 6:
-                    recursividadeProgramacaoDinamica.exercutar();
-                    break;
-                case 7:
-                    tecnicasConceitosAvancados.executar();
-                    break;
-                case 8:
-                    colecaoComparacaoObjetosControleDuplicidade.executar();
-                    break;
-                case 9:
-                    dataTimeNaPratica.exercutarDataTimeNaPratica();
-                    break;
-
-                case 0:
-                    System.out.println("Sistema finalizado.");
-                    break;
-
-                default:
-                    System.out.println("Opção inválida!");
+                    StartSequencial.executarSequencial();
                     break;
             }
-
-        } while (opcao != 0);
-
-        input.close();
+        }while(opcao != 0);
+        leitor.close();
     }
 }
