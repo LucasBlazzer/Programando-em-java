@@ -52,6 +52,7 @@ public class Main {
                     break;
                 case 2:
                     startInterativos.executarInterativos();
+                    break;
             }
         }while(opcao != 0);
         leitor.close();
