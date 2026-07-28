@@ -23,6 +23,7 @@ public class startInterativos {
                     "4 - Calculadora com escolha\n" +
                     "5 - Verificador de par ou ímpar\n" +
                     "6 - Cálculo de desconto em produto\n" +
+                    "7 - Sistema Simples de Login\n" +
                     "0 - sair\n");
             opcao = sc.nextInt();
             switch (opcao) {
@@ -43,6 +44,9 @@ public class startInterativos {
                     break;
                 case 6:
                     DescontoProduto.executarDesconto();
+                    break;
+                case 7:
+                    SistemaLoginSimples.executarSistemaLoginSimples();;
                     break;
                 case 0:
                     System.out.println("Fechando Programa ....");
