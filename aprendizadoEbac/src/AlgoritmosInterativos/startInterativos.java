@@ -5,7 +5,7 @@ import AlgoritmosInterativos.Classes.*;
 import java.util.Scanner;
 
 /**
- * Aqui começaremos a usar algoritmos iterativos para fixar nosso aprendizado em Java.
+ * Aqui começaremos a usar algoritmos iterativos para fixação do aprendizado em Java.
  * Aqui aprenderemos a usar o if, else if e else.
  */
 public class startInterativos {
@@ -24,6 +24,9 @@ public class startInterativos {
                     "5 - Verificador de par ou ímpar\n" +
                     "6 - Cálculo de desconto em produto\n" +
                     "7 - Sistema Simples de Login\n" +
+                    "8 - Sistema de Caixa Eletrônico\n" +
+                    "9 - Classificação de Idade\n" +
+                    "10 - Sistema de Escolha de Planos de Internet\n" +
                     "0 - sair\n");
             opcao = sc.nextInt();
             switch (opcao) {
@@ -47,6 +50,15 @@ public class startInterativos {
                     break;
                 case 7:
                     SistemaLoginSimples.executarSistemaLoginSimples();;
+                    break;
+                case 8:
+                    CaixaEletronico.executarCaixaEletronico();
+                    break;
+                case 9:
+                    ClassificarIdade.excutarClassificacao();;
+                    break;
+                case 10:
+                    PlanoInternet.executarIntenet();
                     break;
                 case 0:
                     System.out.println("Fechando Programa ....");
