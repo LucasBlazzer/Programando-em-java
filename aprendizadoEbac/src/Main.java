@@ -1,4 +1,5 @@
 import AlgoritmosInterativos.startInterativos;
+import AlgoritmosLacosRepeticao.startLacos;
 import AlgoritmosSequenciais.StartSequencial;
 
 import java.util.Scanner;
@@ -52,6 +53,9 @@ public class Main {
                     break;
                 case 2:
                     startInterativos.executarInterativos();
+                    break;
+                case 3:
+                    startLacos.executarRepeticoes();;
                     break;
             }
         }while(opcao != 0);
