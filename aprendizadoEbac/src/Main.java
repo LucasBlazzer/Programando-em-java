@@ -57,6 +57,7 @@ public class Main {
                 case 3:
                     startLacos.executarRepeticoes();;
                     break;
+
             }
         }while(opcao != 0);
         leitor.close();

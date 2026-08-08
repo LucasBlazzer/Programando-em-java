@@ -15,7 +15,13 @@ public class startLacos {
                 "4 - Soma de números de 1 até N\n" +
                 "5 - Mostrar somente os números pares\n" +
                 "6 - Senha Correta\n" +
-                "7 - Soma até digitar o numero zero\n");
+                "7 - Soma até digitar o numero zero\n" +
+                "8 - Contador de números positivos\n" +
+                "9 - Menu Simples com While\n" +
+                "10 - Menu de calculadora\n" +
+                "11 - Cadastro repetido de pessoas\n" +
+                "12 - Validação de notas\n" +
+                "13 - Média de vários Alunos");
         int opcao = leitor.nextInt();
 
         switch(opcao){
@@ -39,6 +45,12 @@ public class startLacos {
                 break;
             case 7:
                 SomaAteZero.executarSomaZero();
+                break;
+            case 8:
+                ContadorPositivo.executarContatorPositivo();
+                break;
+            case 9:
+                MenuWhile.executarMenuWhile();
                 break;
         }
     }
