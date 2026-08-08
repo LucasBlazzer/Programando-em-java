@@ -1,9 +1,6 @@
 package AlgoritmosLacosRepeticao;
 
-import AlgoritmosLacosRepeticao.Classes.Contagem;
-import AlgoritmosLacosRepeticao.Classes.ContagemRegressiva;
-import AlgoritmosLacosRepeticao.Classes.SomaNumeros;
-import AlgoritmosLacosRepeticao.Classes.Tabuada;
+import AlgoritmosLacosRepeticao.Classes.*;
 
 import java.util.Scanner;
 
@@ -15,7 +12,10 @@ public class startLacos {
                 "1 - Contagem\n" +
                 "2 - Contagem Regressiva\n" +
                 "3 - Tabuada\n" +
-                "4 - Soma de números de 1 até N\n");
+                "4 - Soma de números de 1 até N\n" +
+                "5 - Mostrar somente os números pares\n" +
+                "6 - Senha Correta\n" +
+                "7 - Soma até digitar o numero zero\n");
         int opcao = leitor.nextInt();
 
         switch(opcao){
@@ -30,6 +30,15 @@ public class startLacos {
                 break;
             case 4:
                 SomaNumeros.executarSoma();
+                break;
+            case 5:
+                MostrarPares.executarMostrarPares();
+                break;
+            case 6:
+                SenhaCorreta.executarVerificacao();
+                break;
+            case 7:
+                SomaAteZero.executarSomaZero();
                 break;
         }
     }
