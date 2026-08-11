@@ -52,6 +52,9 @@ public class startLacos {
             case 9:
                 MenuWhile.executarMenuWhile();
                 break;
+            case 10:
+                Calculadora.executarMenuCalculadora();
+                break;
         }
     }
 }
